@@ -1,6 +1,6 @@
 ﻿namespace Vaughns_business
 {
-    partial class Form1
+    partial class CustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // CustomerForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.ClientSize = new System.Drawing.Size(868, 362);
+            this.Name = "CustomerForm";
+            this.Text = "CustomerForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
