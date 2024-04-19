@@ -34,6 +34,9 @@ namespace Vaughns_business
         {
             string enteredUsername = textBox_username.Text;
             string enteredPassword = textBox2_password.Text;
+
+            EUserRole role = AuthenticateUser(enteredUsername, enteredPassword);
+
             foreach (StaffLogin login in staffLogins)
             {
                 if (login.UserName == enteredUsername && login.Password == enteredPassword)
@@ -47,15 +50,7 @@ namespace Vaughns_business
             MessageBox.Show("Incorrect login details");
             ResetForm();
         }
-        private void button_clear_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-        }
-        private void ResetForm()
-        {
-            textBox_username.Text = "";
-            textBox2_password.Text = "";
-        }
+
         // reading in staff logins, can be changed to enhance security
         public void ReadFromFile(string filePath)
         {
@@ -66,11 +61,23 @@ namespace Vaughns_business
 
                 string userName = staffDetails[0];
                 string userPass = staffDetails[1];
-                string userAccess = staffDetails[3];
 
                 StaffLogin staff = new StaffLogin { UserName = userName, Password = userPass };
                 staffLogins.Add(staff);
             }
+        }
+        private EUserRole AuthenticateUser(string username, string password)
+        {
+
+        }
+        private void button_clear_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+        private void ResetForm()
+        {
+            textBox_username.Text = "";
+            textBox2_password.Text = "";
         }
     }
 }

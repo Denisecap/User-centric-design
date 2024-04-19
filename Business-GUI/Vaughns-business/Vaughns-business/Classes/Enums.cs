@@ -24,7 +24,7 @@ namespace Vaughns_business.Classes
     }
     public enum EUserRole
     {
-        ADMIN,
-        STAFF
+        ADMIN = 0,
+        STAFF = 1
     }
 }
