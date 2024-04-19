@@ -8,16 +8,12 @@ namespace Vaughns_business.Classes
 {
     public class Customer : Person
     {
-        private string _phoneNum;
-        private string _custEmail;
-
-        public Customer(int id, string firstName, string lastName, string phoneNumber, string email)
-        : base(id, firstName, lastName)
+        private string _order;
+        public Customer(int id, string firstName, string lastName, string phoneNumber, string email, string order)
+        : base(id, firstName, lastName, phoneNumber, email)
         {
-            this._phoneNum = phoneNumber;
-            this._custEmail = email;
+            this._order = order;
         }
-        public string PhoneNumber { get => _phoneNum; set => _phoneNum = value; }
-        public string Email { get => _custEmail; set => _custEmail = value; }
+        public string Order { get =>  _order; set => _order = value; }
     }
 }
