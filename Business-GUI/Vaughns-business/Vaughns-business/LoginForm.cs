@@ -14,9 +14,10 @@ namespace Vaughns_business
 {
     public partial class LoginForm : Form
     {
+        // holds staff username, passwords and userID
         public struct StaffLogin
         {
-            public int UserID { get; set; }
+            public int UserID { get; set; } // staff id, used for finding index of staff within staff_login text file
             public string UserName { get; set; }
             public string Password { get; set; }
         }
