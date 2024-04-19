@@ -22,6 +22,7 @@ namespace Vaughns_business.Classes
         RECEPTIONIST_SALARY = 70000,
         TOUR_GUIDE_SALARY = 60000
     }
+    // used for different access for functions within form
     public enum EUserRole
     {
         ADMIN = 0,

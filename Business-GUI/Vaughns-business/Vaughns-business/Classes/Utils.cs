@@ -44,8 +44,9 @@ namespace Vaughns_business.Classes
                 string email = staffDetails[4];
                 EPosition position = (EPosition)int.Parse(staffDetails[3]);
                 ESalary salary = (ESalary)int.Parse(staffDetails[4]);
+                EUserRole userRole = (EUserRole)int.Parse(staffDetails[5]); // provides different access based on role, view Enums class for details
 
-                Staff staff = new Staff(id, firstName, lastName, phoneNum, email, position, salary);
+                Staff staff = new Staff(id, firstName, lastName, phoneNum, email, position, salary, userRole);
                 staffs.Add(staff);
             }
         }

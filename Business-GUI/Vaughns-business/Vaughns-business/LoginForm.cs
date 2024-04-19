@@ -16,12 +16,11 @@ namespace Vaughns_business
     {
         public struct StaffLogin
         {
+            public int UserID { get; set; }
             public string UserName { get; set; }
             public string Password { get; set; }
-            public string User { get; set; }
         }
         private List<StaffLogin> staffLogins = new List<StaffLogin>();
-        private EUserRole currentUserRole; // storing current user access
         public LoginForm()
         {
             InitializeComponent();
@@ -32,10 +31,9 @@ namespace Vaughns_business
         }
         private void button_login_Click(object sender, EventArgs e)
         {
+            // storing user inputs in strings
             string enteredUsername = textBox_username.Text;
             string enteredPassword = textBox2_password.Text;
-
-            EUserRole role = AuthenticateUser(enteredUsername, enteredPassword);
 
             foreach (StaffLogin login in staffLogins)
             {
@@ -59,16 +57,13 @@ namespace Vaughns_business
             {
                 string[] staffDetails = line.Split(',');
 
-                string userName = staffDetails[0];
-                string userPass = staffDetails[1];
+                int userId = int.Parse(staffDetails[0]);
+                string userName = staffDetails[1];
+                string userPass = staffDetails[2];
 
-                StaffLogin staff = new StaffLogin { UserName = userName, Password = userPass };
+                StaffLogin staff = new StaffLogin { UserID = userId, UserName = userName, Password = userPass };
                 staffLogins.Add(staff);
             }
-        }
-        private EUserRole AuthenticateUser(string username, string password)
-        {
-
         }
         private void button_clear_Click(object sender, EventArgs e)
         {

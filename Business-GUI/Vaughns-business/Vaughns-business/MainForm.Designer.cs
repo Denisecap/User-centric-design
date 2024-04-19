@@ -61,9 +61,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(112, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 18);
+            this.label2.Size = new System.Drawing.Size(279, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "\"User\" Currently Signed";
+            this.label2.Text = "\"User\"(USER ACCESS) Currently Signed";
             // 
             // label1
             // 
