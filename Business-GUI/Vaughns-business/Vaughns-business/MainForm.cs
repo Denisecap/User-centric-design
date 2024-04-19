@@ -14,13 +14,21 @@ namespace Vaughns_business
     public partial class MainForm : Form
     {
         public List<Customer> customersList = new List<Customer>();
+        public List<Staff> staffList = new List<Staff>();
         public MainForm()
         {
             InitializeComponent();
 
             // reading customers
-            string filePath = "..\\..\\Text_files\\customers.txt";
-            Utils.ReadFromFile(filePath, customersList);
+            string customerFilePath = "..\\..\\Text_files\\customers.txt";
+            Utils.ReadFromFile(customerFilePath, customersList);
+
+            // reading in staff
+            string staffFilePath = "..\\..\\Text_files\\staff.txt";
+            Utils.ReadFromFile(staffFilePath, staffList);
+
+            dataGridView1.DataSource = customersList;
+            dataGridView2.DataSource = staffList;
         }
         private void button_customer_Click(object sender, EventArgs e)
         {

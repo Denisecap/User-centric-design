@@ -42,9 +42,9 @@ namespace Vaughns_business.Classes
                 string lastName = staffDetails[2];
                 string phoneNum = staffDetails[3];
                 string email = staffDetails[4];
-                EPosition position = (EPosition)int.Parse(staffDetails[3]);
-                ESalary salary = (ESalary)int.Parse(staffDetails[4]);
-                EUserRole userRole = (EUserRole)int.Parse(staffDetails[5]); // provides different access based on role, view Enums class for details
+                EPosition position = (EPosition)int.Parse(staffDetails[5]);
+                ESalary salary = (ESalary)int.Parse(staffDetails[6]);
+                EUserRole userRole = (EUserRole)int.Parse(staffDetails[7]); // provides different access based on role, view Enums class for details
 
                 Staff staff = new Staff(id, firstName, lastName, phoneNum, email, position, salary, userRole);
                 staffs.Add(staff);
