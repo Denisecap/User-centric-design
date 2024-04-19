@@ -7,27 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vaughns_business.Classes;
+using System.IO;
 
 namespace Vaughns_business
 {
     public partial class LoginForm : Form
     {
+        public struct StaffLogin
+        {
+            public string UserName { get; set; }
+            public string Password { get; set; }
+            public string User { get; set; }
+        }
+        private List<StaffLogin> staffLogins = new List<StaffLogin>();
+        private EUserRole currentUserRole; // storing current user access
         public LoginForm()
         {
             InitializeComponent();
+
+            // reading staff login
+            string filePath = "..\\..\\Text_files\\staff_login.txt";
+            ReadFromFile(filePath);
         }
         private void button_login_Click(object sender, EventArgs e)
         {
-            if (textBox_username.Text == "user_username" && textBox2_password.Text == "user_password")
+            string enteredUsername = textBox_username.Text;
+            string enteredPassword = textBox2_password.Text;
+            foreach (StaffLogin login in staffLogins)
             {
-                new MainForm().Show();
-                this.Hide();
+                if (login.UserName == enteredUsername && login.Password == enteredPassword)
+                {
+                    new MainForm().Show();
+                    this.Hide();
+                    return; // exits the method after successful login
+                }
             }
-            else
-            {
-                MessageBox.Show("Incorrect login details");
-                ResetForm();
-            }
+            // show error message if no matching details
+            MessageBox.Show("Incorrect login details");
+            ResetForm();
         }
         private void button_clear_Click(object sender, EventArgs e)
         {
@@ -37,6 +55,22 @@ namespace Vaughns_business
         {
             textBox_username.Text = "";
             textBox2_password.Text = "";
+        }
+        // reading in staff logins, can be changed to enhance security
+        public void ReadFromFile(string filePath)
+        {
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                string[] staffDetails = line.Split(',');
+
+                string userName = staffDetails[0];
+                string userPass = staffDetails[1];
+                string userAccess = staffDetails[3];
+
+                StaffLogin staff = new StaffLogin { UserName = userName, Password = userPass };
+                staffLogins.Add(staff);
+            }
         }
     }
 }

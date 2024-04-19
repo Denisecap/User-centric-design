@@ -22,4 +22,9 @@ namespace Vaughns_business.Classes
         RECEPTIONIST_SALARY = 70000,
         TOUR_GUIDE_SALARY = 60000
     }
+    public enum EUserRole
+    {
+        ADMIN,
+        STAFF
+    }
 }
