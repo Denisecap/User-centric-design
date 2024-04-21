@@ -30,29 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel_top = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_user_info = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.panel_bottom = new System.Windows.Forms.Panel();
             this.button_customer = new System.Windows.Forms.Button();
             this.button_home_page = new System.Windows.Forms.Button();
             this.panel_container = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.panel_bottom.SuspendLayout();
-            this.panel_container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_top
             // 
             this.panel_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_top.Controls.Add(this.label2);
+            this.panel_top.Controls.Add(this.label_user_info);
             this.panel_top.Controls.Add(this.label1);
             this.panel_top.Controls.Add(this.pictureBox_logo);
             this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,16 +54,16 @@
             this.panel_top.Size = new System.Drawing.Size(884, 80);
             this.panel_top.TabIndex = 0;
             // 
-            // label2
+            // label_user_info
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(112, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "\"User\"(USER ACCESS) Currently Signed";
+            this.label_user_info.AutoSize = true;
+            this.label_user_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_user_info.ForeColor = System.Drawing.Color.White;
+            this.label_user_info.Location = new System.Drawing.Point(112, 62);
+            this.label_user_info.Name = "label_user_info";
+            this.label_user_info.Size = new System.Drawing.Size(279, 18);
+            this.label_user_info.TabIndex = 2;
+            this.label_user_info.Text = "\"User\"(USER ACCESS) Currently Signed";
             // 
             // label1
             // 
@@ -134,38 +127,11 @@
             // panel_container
             // 
             this.panel_container.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel_container.Controls.Add(this.dataGridView3);
-            this.panel_container.Controls.Add(this.dataGridView2);
-            this.panel_container.Controls.Add(this.dataGridView1);
             this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_container.Location = new System.Drawing.Point(0, 80);
             this.panel_container.Name = "panel_container";
             this.panel_container.Size = new System.Drawing.Size(884, 401);
             this.panel_container.TabIndex = 2;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(310, 95);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(581, 95);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView3.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -182,10 +148,6 @@
             this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.panel_bottom.ResumeLayout(false);
-            this.panel_container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,12 +158,9 @@
         private System.Windows.Forms.Panel panel_bottom;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Button button_home_page;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_user_info;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_customer;
         private System.Windows.Forms.Panel panel_container;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }

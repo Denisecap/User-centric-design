@@ -23,9 +23,9 @@ namespace Vaughns_business.Classes
                 string lastName = customerDetails[2];
                 string phoneNum = customerDetails[3];
                 string email = customerDetails[4];
-                int order = int.Parse(customerDetails[5]);
+                int orderId = int.Parse(customerDetails[5]);
 
-                Customer customer = new Customer(id, firstName, lastName, phoneNum, email, order);
+                Customer customer = new Customer(id, firstName, lastName, phoneNum, email, orderId);
                 customers.Add(customer);
             }
         }
@@ -65,7 +65,6 @@ namespace Vaughns_business.Classes
 
                 Order order = new Order(orderId, orderName, orderPrice);
                 orders.Add(order);
-
             }
         }
 

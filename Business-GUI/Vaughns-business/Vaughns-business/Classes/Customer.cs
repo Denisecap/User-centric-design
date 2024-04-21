@@ -14,6 +14,6 @@ namespace Vaughns_business.Classes
         {
             this._orderId = orderID;
         }
-        public int Order { get =>  _orderId; set => _orderId = value; }
+        public int OrderId { get =>  _orderId; set => _orderId = value; }
     }
 }

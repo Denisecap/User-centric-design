@@ -40,7 +40,8 @@ namespace Vaughns_business
             {
                 if (login.UserName == enteredUsername && login.Password == enteredPassword)
                 {
-                    new MainForm().Show();
+                    int currentUser = login.UserID;
+                    new MainForm(currentUser).Show();
                     this.Hide();
                     return; // exits the method after successful login
                 }
