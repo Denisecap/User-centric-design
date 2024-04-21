@@ -60,10 +60,12 @@ namespace Vaughns_business.Classes
                 string[] orderDetails = line.Split(',');
 
                 int orderId = int.Parse(orderDetails[0]);
-                string orderName = orderDetails[1];
-                double orderPrice = int.Parse(orderDetails[2]);
+                int customerId = int.Parse(orderDetails[1]);
+                string orderName = orderDetails[3];
+                double orderPrice = int.Parse(orderDetails[4]);
+                string dateTime = orderDetails[5];
 
-                Order order = new Order(orderId, orderName, orderPrice);
+                Order order = new Order(orderId, customerId, orderName, orderPrice, dateTime);
                 orders.Add(order);
             }
         }

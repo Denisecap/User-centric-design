@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,8 +41,18 @@ namespace Vaughns_business
             Utils.ReadFromFile(orderFilePath, ordersList);
 
             // adding an order 
-            DateTime now = DateTime.Now; // Current date and time
-            Order newOrder = new Order(1, 1001, "Product Name", 50.0, now);
+            int orderId = 1;
+            int customerId = 1;
+            string productName = "1x ride";
+            double price = 50;
+            string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string orderString = $"{orderId},{customerId},{productName},{price},{dateTime}";
+
+            using (StreamWriter sw = new StreamWriter("..\\..\\Text_files\\orders.txt", append: true))
+            {
+                sw.WriteLine(orderString);
+            }
 
         }
         private void SetUserLabel(int userId)

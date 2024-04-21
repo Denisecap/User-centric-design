@@ -51,6 +51,7 @@
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Staff.cs" />
+    <Compile Include="Classes\StaffLogin.cs" />
     <Compile Include="Classes\Utils.cs" />
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
