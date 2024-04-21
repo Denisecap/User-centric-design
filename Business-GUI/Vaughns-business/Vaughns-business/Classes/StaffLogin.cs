@@ -19,6 +19,6 @@ namespace Vaughns_business.Classes
         }
         public int UserId { get => _userId; set => _userId = value; }
         public string UserName { get => _userName; set => _userName = value; }
-        public string _PassWord { get => _passWord; set => _passWord = value; }
+        public string PassWord { get => _passWord; set => _passWord = value; }
     }
 }

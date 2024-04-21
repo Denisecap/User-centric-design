@@ -14,13 +14,6 @@ namespace Vaughns_business
 {
     public partial class LoginForm : Form
     {
-        // holds staff username, passwords and userID
-        public struct StaffLogin
-        {
-            public int UserID { get; set; } // staff id, used for finding index of staff within staff_login text file
-            public string UserName { get; set; }
-            public string Password { get; set; }
-        }
         private List<StaffLogin> staffLogins = new List<StaffLogin>();
         public LoginForm()
         {
@@ -38,9 +31,9 @@ namespace Vaughns_business
 
             foreach (StaffLogin login in staffLogins)
             {
-                if (login.UserName == enteredUsername && login.Password == enteredPassword)
+                if (login.UserName == enteredUsername && login.PassWord == enteredPassword)
                 {
-                    int currentUser = login.UserID;
+                    int currentUser = login.UserId;
                     new MainForm(currentUser).Show();
                     this.Hide();
                     return; // exits the method after successful login
