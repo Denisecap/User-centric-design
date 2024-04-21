@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\Enums.cs" />
+    <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Staff.cs" />
     <Compile Include="Classes\Utils.cs" />
@@ -103,6 +104,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Text_files\orders.txt" />
     <Content Include="Text_files\staff.txt" />
     <Content Include="Text_files\customers.txt" />
     <Content Include="Text_files\staff_login.txt" />

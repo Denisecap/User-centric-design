@@ -28,7 +28,7 @@ namespace Vaughns_business
 
             // reading staff login
             string filePath = "..\\..\\Text_files\\staff_login.txt";
-            ReadFromFile(filePath);
+            Utils.ReadFromFile(filePath, staffLogins);
         }
         private void button_login_Click(object sender, EventArgs e)
         {
@@ -48,23 +48,6 @@ namespace Vaughns_business
             // show error message if no matching details
             MessageBox.Show("Incorrect login details");
             ResetForm();
-        }
-
-        // reading in staff logins, can be changed to enhance security
-        public void ReadFromFile(string filePath)
-        {
-            List<string> lines = File.ReadAllLines(filePath).ToList();
-            foreach (string line in lines)
-            {
-                string[] staffDetails = line.Split(',');
-
-                int userId = int.Parse(staffDetails[0]);
-                string userName = staffDetails[1];
-                string userPass = staffDetails[2];
-
-                StaffLogin staff = new StaffLogin { UserID = userId, UserName = userName, Password = userPass };
-                staffLogins.Add(staff);
-            }
         }
         private void button_clear_Click(object sender, EventArgs e)
         {

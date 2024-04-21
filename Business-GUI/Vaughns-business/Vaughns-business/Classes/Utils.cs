@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using static Vaughns_business.LoginForm;
 
 namespace Vaughns_business.Classes
 {
@@ -53,23 +54,27 @@ namespace Vaughns_business.Classes
         // reading in order details
         public static void ReadFromFile(string filePath)
         {
-
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                string[] orderDetails = line.Split(',');
+            }
         }
 
         // reading in staff logins, can be changed to enhance security
-        public static void ReadFromFile(string filePath, List<StaffLogin> staffLogin)
+        public static void ReadFromFile(string filePath, List<StaffLogin> staffLogins)
         {
             List<string> lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
             {
-                string[] staffDetails = line.Split(',');
+                string[] staffLoginDetails = line.Split(',');
 
-                int userId = int.Parse(staffDetails[0]);
-                string userName = staffDetails[1];
-                string userPass = staffDetails[2];
+                int userId = int.Parse(staffLoginDetails[0]);
+                string userName = staffLoginDetails[1];
+                string userPass = staffLoginDetails[2];
 
                 StaffLogin staff = new StaffLogin { UserID = userId, UserName = userName, Password = userPass };
-                staffLogin.Add(staff);
+                staffLogins.Add(staff);
             }
         }
     }

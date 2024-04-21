@@ -42,7 +42,7 @@
             this.textBox_username.Name = "textBox_username";
             this.textBox_username.Size = new System.Drawing.Size(212, 20);
             this.textBox_username.TabIndex = 0;
-            this.textBox_username.Text = "user_username";
+            this.textBox_username.Text = "username";
             // 
             // textBox2_password
             // 
@@ -50,7 +50,7 @@
             this.textBox2_password.Name = "textBox2_password";
             this.textBox2_password.Size = new System.Drawing.Size(212, 20);
             this.textBox2_password.TabIndex = 1;
-            this.textBox2_password.Text = "user_password";
+            this.textBox2_password.Text = "password";
             // 
             // label1
             // 
