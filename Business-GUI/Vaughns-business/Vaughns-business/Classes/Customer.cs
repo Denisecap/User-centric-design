@@ -8,7 +8,7 @@ namespace Vaughns_business.Classes
 {
     public class Customer : Person
     {
-        public Customer(int id, string firstName, string lastName, string phoneNumber, string email, int orderID)
+        public Customer(int id, string firstName, string lastName, string phoneNumber, string email)
         : base(id, firstName, lastName, phoneNumber, email)
         {
 

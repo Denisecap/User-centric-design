@@ -1,1 +1,2 @@
 ﻿1,Vaughn,Malkin,+6439727453,vaughn.malkin@op.ac.nz,0,100000,0
+2,Elijah,Hiraka,0221728922,hirae1@student.op.ac.nz,1,4000,1

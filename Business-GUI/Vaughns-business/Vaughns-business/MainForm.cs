@@ -40,19 +40,19 @@ namespace Vaughns_business
             string orderFilePath = "..\\..\\Text_files\\orders.txt";
             Utils.ReadFromFile(orderFilePath, ordersList);
 
-            // adding an order 
-            int orderId = 1;
-            int customerId = 1;
-            string productName = "1x ride";
-            double price = 50;
-            string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //// adding an order 
+            //int orderId = 1;
+            //int customerId = 1;
+            //string productName = "1x ride";
+            //double price = 50;
+            //string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            string orderString = $"{orderId},{customerId},{productName},{price},{dateTime}";
+            //string orderString = $"{orderId},{customerId},{productName},{price},{dateTime}";
 
-            using (StreamWriter sw = new StreamWriter("..\\..\\Text_files\\orders.txt", append: true))
-            {
-                sw.WriteLine(orderString);
-            }
+            //using (StreamWriter sw = new StreamWriter("..\\..\\Text_files\\orders.txt", append: true))
+            //{
+            //    sw.WriteLine(orderString);
+            //}
 
         }
         private void SetUserLabel(int userId)

@@ -94,7 +94,7 @@
             this.panel_bottom.Controls.Add(this.button_customer);
             this.panel_bottom.Controls.Add(this.button_home_page);
             this.panel_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_bottom.Location = new System.Drawing.Point(0, 481);
+            this.panel_bottom.Location = new System.Drawing.Point(0, 581);
             this.panel_bottom.Name = "panel_bottom";
             this.panel_bottom.Size = new System.Drawing.Size(884, 80);
             this.panel_bottom.TabIndex = 1;
@@ -130,14 +130,14 @@
             this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_container.Location = new System.Drawing.Point(0, 80);
             this.panel_container.Name = "panel_container";
-            this.panel_container.Size = new System.Drawing.Size(884, 401);
+            this.panel_container.Size = new System.Drawing.Size(884, 501);
             this.panel_container.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.panel_container);
             this.Controls.Add(this.panel_bottom);
             this.Controls.Add(this.panel_top);

@@ -23,9 +23,8 @@ namespace Vaughns_business.Classes
                 string lastName = customerDetails[2];
                 string phoneNum = customerDetails[3];
                 string email = customerDetails[4];
-                int orderId = int.Parse(customerDetails[5]);
 
-                Customer customer = new Customer(id, firstName, lastName, phoneNum, email, orderId);
+                Customer customer = new Customer(id, firstName, lastName, phoneNum, email);
                 customers.Add(customer);
             }
         }
@@ -61,9 +60,9 @@ namespace Vaughns_business.Classes
 
                 int orderId = int.Parse(orderDetails[0]);
                 int customerId = int.Parse(orderDetails[1]);
-                string orderName = orderDetails[3];
-                double orderPrice = int.Parse(orderDetails[4]);
-                string dateTime = orderDetails[5];
+                string orderName = orderDetails[2];
+                double orderPrice = int.Parse(orderDetails[3]);
+                string dateTime = orderDetails[4];
 
                 Order order = new Order(orderId, customerId, orderName, orderPrice, dateTime);
                 orders.Add(order);
@@ -82,7 +81,7 @@ namespace Vaughns_business.Classes
                 string userName = staffLoginDetails[1];
                 string userPass = staffLoginDetails[2];
 
-                StaffLogin staff = new StaffLogin { UserID = userId, UserName = userName, Password = userPass };
+                StaffLogin staff = new StaffLogin(userId, userName, userPass);
                 staffLogins.Add(staff);
             }
         }
