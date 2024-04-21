@@ -23,7 +23,7 @@ namespace Vaughns_business.Classes
                 string lastName = customerDetails[2];
                 string phoneNum = customerDetails[3];
                 string email = customerDetails[4];
-                string order = customerDetails[5];
+                int order = int.Parse(customerDetails[5]);
 
                 Customer customer = new Customer(id, firstName, lastName, phoneNum, email, order);
                 customers.Add(customer);
@@ -58,6 +58,13 @@ namespace Vaughns_business.Classes
             foreach (string line in lines)
             {
                 string[] orderDetails = line.Split(',');
+
+                int orderId = int.Parse(orderDetails[0]);
+                string orderName = orderDetails[1];
+                double orderPrice = int.Parse(orderDetails[2]);
+
+                Order order = new Order(orderId, orderName, orderPrice);
+
             }
         }
 
