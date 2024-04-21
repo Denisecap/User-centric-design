@@ -50,5 +50,27 @@ namespace Vaughns_business.Classes
                 staffs.Add(staff);
             }
         }
+        // reading in order details
+        public static void ReadFromFile(string filePath)
+        {
+
+        }
+
+        // reading in staff logins, can be changed to enhance security
+        public static void ReadFromFile(string filePath, List<StaffLogin> staffLogin)
+        {
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                string[] staffDetails = line.Split(',');
+
+                int userId = int.Parse(staffDetails[0]);
+                string userName = staffDetails[1];
+                string userPass = staffDetails[2];
+
+                StaffLogin staff = new StaffLogin { UserID = userId, UserName = userName, Password = userPass };
+                staffLogin.Add(staff);
+            }
+        }
     }
 }
