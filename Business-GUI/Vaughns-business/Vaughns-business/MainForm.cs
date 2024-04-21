@@ -15,6 +15,7 @@ namespace Vaughns_business
     {
         public List<Customer> customersList = new List<Customer>();
         public List<Staff> staffList = new List<Staff>();
+        public List<Order> ordersList = new List<Order>();
         public MainForm()
         {
             InitializeComponent();
@@ -26,6 +27,10 @@ namespace Vaughns_business
             // reading in staff
             string staffFilePath = "..\\..\\Text_files\\staff.txt";
             Utils.ReadFromFile(staffFilePath, staffList);
+
+            // reading in staff
+            string orderFilePath = "..\\..\\Text_files\\staff.txt";
+            Utils.ReadFromFile(orderFilePath, ordersList);
 
             dataGridView1.DataSource = customersList;
             dataGridView2.DataSource = staffList;

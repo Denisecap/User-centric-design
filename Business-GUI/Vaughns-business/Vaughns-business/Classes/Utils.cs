@@ -52,7 +52,7 @@ namespace Vaughns_business.Classes
             }
         }
         // reading in order details
-        public static void ReadFromFile(string filePath)
+        public static void ReadFromFile(string filePath, List<Order> orders)
         {
             List<string> lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
@@ -64,6 +64,7 @@ namespace Vaughns_business.Classes
                 double orderPrice = int.Parse(orderDetails[2]);
 
                 Order order = new Order(orderId, orderName, orderPrice);
+                orders.Add(order);
 
             }
         }
