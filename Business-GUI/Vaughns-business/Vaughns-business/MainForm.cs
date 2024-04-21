@@ -15,9 +15,9 @@ namespace Vaughns_business
 {
     public partial class MainForm : Form
     {
-        public List<Customer> customersList = new List<Customer>();
-        public List<Staff> staffList = new List<Staff>();
-        public List<Order> ordersList = new List<Order>();
+        private List<Customer> customersList = new List<Customer>();
+        private List<Staff> staffList = new List<Staff>();
+        private List<Order> ordersList = new List<Order>();
         public MainForm(int userId)
         {
             InitializeComponent();

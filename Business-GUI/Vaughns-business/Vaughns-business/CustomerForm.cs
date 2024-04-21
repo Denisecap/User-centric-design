@@ -22,6 +22,13 @@ namespace Vaughns_business
             // adding data to local list
             customerList = customers;
             ordersList = orders;
+
+            // display customers
+            DisplayCustomers();
+        }
+        private void DisplayCustomers()
+        {
+
         }
     }
 }
