@@ -28,7 +28,13 @@ namespace Vaughns_business
         }
         private void DisplayCustomers()
         {
-
+            dataGridView1.DataSource = customerList.Select(customer => new
+            {
+                CustomerID = customer.Id,
+                FullName = $"{customer.FirstName} {customer.LastName}",
+                Phone = customer.PhoneNumber,
+                Email = customer.Email
+            }).ToList();
         }
     }
 }
