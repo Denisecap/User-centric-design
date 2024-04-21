@@ -23,7 +23,7 @@ namespace Vaughns_business
 
             // initializing form
             ReadInPeople();
-            SetUserLabel();
+            SetUserLabel(userId);
         }
         private void ReadInPeople()
         {
@@ -38,8 +38,13 @@ namespace Vaughns_business
             // reading in staff
             string orderFilePath = "..\\..\\Text_files\\orders.txt";
             Utils.ReadFromFile(orderFilePath, ordersList);
+
+            // adding an order 
+            DateTime now = DateTime.Now; // Current date and time
+            Order newOrder = new Order(1, 1001, "Product Name", 50.0, now);
+
         }
-        private void SetUserLabel()
+        private void SetUserLabel(int userId)
         {
             // initalising text for users
             string fullName = "";

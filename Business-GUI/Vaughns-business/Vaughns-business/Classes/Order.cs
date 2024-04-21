@@ -12,16 +12,22 @@ namespace Vaughns_business.Classes
         private int _customerId;
         private string _name;
         private double _price;
-        public Order(int orderid, int custId, string name, double price)
+        private DateTime _orderedAt;
+
+        public Order(int orderId, int customerId, string name, double price, DateTime orderedAt)
         {
-            _orderId = orderid;
-            _customerId = custId;
+            _orderId = orderId;
+            _customerId = customerId;
             _name = name;
             _price = price;
+            _orderedAt = orderedAt;
         }
+
         public int OrderId { get => _orderId; set => _orderId = value; }
         public int CustomerId { get => _customerId; set => _customerId = value; }
         public string Name { get => _name; set => _name = value; }
         public double Price { get => _price; set => _price = value; }
+        public DateTime CreatedAt { get => _orderedAt; set => _orderedAt = value; }
     }
+
 }
