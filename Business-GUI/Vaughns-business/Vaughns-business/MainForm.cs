@@ -34,6 +34,7 @@ namespace Vaughns_business
 
             dataGridView1.DataSource = customersList;
             dataGridView2.DataSource = staffList;
+            dataGridView3.DataSource = ordersList;
         }
         private void button_customer_Click(object sender, EventArgs e)
         {
