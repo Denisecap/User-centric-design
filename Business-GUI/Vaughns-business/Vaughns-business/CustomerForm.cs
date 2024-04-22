@@ -36,5 +36,10 @@ namespace Vaughns_business
                 Email = customer.Email
             }).ToList();
         }
+
+        private void button_add_customer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
