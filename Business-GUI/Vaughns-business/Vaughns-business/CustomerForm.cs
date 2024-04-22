@@ -15,9 +15,15 @@ namespace Vaughns_business
     {
         private List<Customer> customerList;
         private List<Order> ordersList;
-        public CustomerForm(List<Customer> customers, List<Order> orders)
+
+        // creating an instance of MainForm
+        private MainForm mainFormInstance;
+        public CustomerForm(MainForm mainForm, List<Customer> customers, List<Order> orders)
         {
             InitializeComponent();
+
+            // adding MainForm instance to this form
+            mainFormInstance = mainForm;
 
             // adding data to local list
             customerList = customers;
@@ -37,9 +43,14 @@ namespace Vaughns_business
             }).ToList();
         }
 
+        // adding persons to list
+        public void AddCustomer(Customer customer)
+        {
+            customerList.Add(customer);
+        }
         private void button_add_customer_Click(object sender, EventArgs e)
         {
-            Form form = new CustomerCustomize();
+            Form form = new CustomerCustomize(mainFormInstance, this);
             OpenContainerForm(form);
         }
         private Form activeForm = null;

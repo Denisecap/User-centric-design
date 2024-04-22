@@ -55,6 +55,11 @@ namespace Vaughns_business
             //}
 
         }
+        private void button_customer_Click(object sender, EventArgs e)
+        {
+            Form form = new CustomerForm(this, customersList, ordersList);
+            OpenContainerForm(form);
+        }
         private void SetUserLabel(int userId)
         {
             // initalising text for users
@@ -70,10 +75,33 @@ namespace Vaughns_business
             }
             label_user_info.Text = $"{fullName}({userAccess}) Currently Signed";
         }
-        private void button_customer_Click(object sender, EventArgs e)
+        public int GetUniqueId(int selection)
         {
-            Form form = new CustomerForm(customersList, ordersList);
-            OpenContainerForm(form);
+            int personId;
+            int idIteration;
+            List<int> idList = new List<int>();
+            if (selection == 0)
+            {
+                foreach (Customer customer in customersList)
+                {
+                    idList.Add(customer.Id); // iterates through learners and adds the id value to array
+                }
+                idIteration = customersList.Count + 1; // new id for learner based on count
+            }
+            else
+            {
+                foreach (Staff staff in staffList)
+                {
+                    idList.Add(staff.Id);
+                }
+                idIteration = staffList.Count + 1;
+            }
+            while (idList.Contains(idIteration))
+            {
+                idIteration++;
+            }
+            personId = idIteration; // id for txt file
+            return personId;
         }
 
         private Form activeForm = null;
