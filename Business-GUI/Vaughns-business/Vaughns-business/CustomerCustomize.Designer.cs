@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_firstName = new System.Windows.Forms.TextBox();
+            this.textBox_lastName = new System.Windows.Forms.TextBox();
+            this.textBox_phone = new System.Windows.Forms.TextBox();
+            this.textBox_email = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_add = new System.Windows.Forms.Button();
+            this.button_clear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox_firstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBox_firstName.Location = new System.Drawing.Point(151, 124);
+            this.textBox_firstName.Name = "textBox_firstName";
+            this.textBox_firstName.Size = new System.Drawing.Size(193, 20);
+            this.textBox_firstName.TabIndex = 0;
             // 
-            // textBox2
+            // textBox_lastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBox_lastName.Location = new System.Drawing.Point(151, 176);
+            this.textBox_lastName.Name = "textBox_lastName";
+            this.textBox_lastName.Size = new System.Drawing.Size(193, 20);
+            this.textBox_lastName.TabIndex = 1;
             // 
-            // textBox3
+            // textBox_phone
             // 
-            this.textBox3.Location = new System.Drawing.Point(151, 229);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBox_phone.Location = new System.Drawing.Point(151, 229);
+            this.textBox_phone.Name = "textBox_phone";
+            this.textBox_phone.Size = new System.Drawing.Size(193, 20);
+            this.textBox_phone.TabIndex = 2;
             // 
-            // textBox4
+            // textBox_email
             // 
-            this.textBox4.Location = new System.Drawing.Point(151, 280);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(193, 20);
-            this.textBox4.TabIndex = 3;
+            this.textBox_email.Location = new System.Drawing.Point(151, 280);
+            this.textBox_email.Name = "textBox_email";
+            this.textBox_email.Size = new System.Drawing.Size(193, 20);
+            this.textBox_email.TabIndex = 3;
             // 
             // label1
             // 
@@ -105,23 +105,24 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Email:";
             // 
-            // button1
+            // button_add
             // 
-            this.button1.Location = new System.Drawing.Point(269, 334);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_add.Location = new System.Drawing.Point(269, 334);
+            this.button_add.Name = "button_add";
+            this.button_add.Size = new System.Drawing.Size(75, 23);
+            this.button_add.TabIndex = 8;
+            this.button_add.Text = "Add";
+            this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
-            // button2
+            // button_clear
             // 
-            this.button2.Location = new System.Drawing.Point(151, 334);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_clear.Location = new System.Drawing.Point(151, 334);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(75, 23);
+            this.button_clear.TabIndex = 9;
+            this.button_clear.Text = "Clear";
+            this.button_clear.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -140,16 +141,16 @@
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(410, 394);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_clear);
+            this.Controls.Add(this.button_add);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_email);
+            this.Controls.Add(this.textBox_phone);
+            this.Controls.Add(this.textBox_lastName);
+            this.Controls.Add(this.textBox_firstName);
             this.Name = "CustomerCustomize";
             this.Text = "CustomerCustomize";
             this.ResumeLayout(false);
@@ -159,16 +160,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_firstName;
+        private System.Windows.Forms.TextBox textBox_lastName;
+        private System.Windows.Forms.TextBox textBox_phone;
+        private System.Windows.Forms.TextBox textBox_email;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Label label5;
     }
 }
