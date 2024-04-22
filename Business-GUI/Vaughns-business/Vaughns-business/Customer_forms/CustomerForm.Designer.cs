@@ -135,6 +135,7 @@
             this.button_delete_customer.TabIndex = 4;
             this.button_delete_customer.Text = "Delete";
             this.button_delete_customer.UseVisualStyleBackColor = false;
+            this.button_delete_customer.Click += new System.EventHandler(this.button_delete_customer_Click);
             // 
             // panel_edit_customers
             // 
@@ -158,6 +159,7 @@
             // 
             // panel_container
             // 
+            this.panel_container.BackColor = System.Drawing.Color.RosyBrown;
             this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_container.Location = new System.Drawing.Point(442, 0);
             this.panel_container.Name = "panel_container";

@@ -61,7 +61,10 @@ namespace Vaughns_business
                         sw.WriteLine($"{customer.Id},{customer.FirstName},{customer.LastName},{customer.PhoneNumber},{customer.Email}");
                     }
                 }
+
+                // updating datagridview with new details
                 customerFormInstance.EditCustomer(customerToUpdate);
+
                 MessageBox.Show("Customer data updated successfully.");
                 ClearInputFields();
             }

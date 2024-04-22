@@ -53,10 +53,16 @@
     <Compile Include="Classes\Staff.cs" />
     <Compile Include="Classes\StaffLogin.cs" />
     <Compile Include="Classes\Utils.cs" />
-    <Compile Include="CustomerEdit.cs">
+    <Compile Include="CustomerRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerEdit.Designer.cs">
+    <Compile Include="CustomerRemove.Designer.cs">
+      <DependentUpon>CustomerRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_forms\CustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_forms\CustomerEdit.Designer.cs">
       <DependentUpon>CustomerEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer_forms\CustomerAdd.cs">
@@ -85,7 +91,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CustomerEdit.resx">
+    <EmbeddedResource Include="CustomerRemove.resx">
+      <DependentUpon>CustomerRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_forms\CustomerEdit.resx">
       <DependentUpon>CustomerEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_forms\CustomerAdd.resx">
