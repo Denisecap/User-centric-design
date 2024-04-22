@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,7 +51,7 @@ namespace Vaughns_business
                 sw.WriteLine(customerDetails);
             }
 
-            // adding lecturer to lecturersList in Form1
+            // adding customer to customers list 
             Customer newLecturer = new Customer(customerId, names[0], names[1], phone, email);
             customerFormInstance.AddCustomer(newLecturer);
 
