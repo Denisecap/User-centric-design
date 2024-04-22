@@ -12,12 +12,12 @@ using Vaughns_business.Classes;
 
 namespace Vaughns_business
 {
-    public partial class CustomerCustomize : Form
+    public partial class CustomerAdd : Form
     {
         // creating an instance of forms
         private MainForm mainFormInstance;
         private CustomerForm customerFormInstance;
-        public CustomerCustomize(MainForm mainForm, CustomerForm customerForm)
+        public CustomerAdd(MainForm mainForm, CustomerForm customerForm)
         {
             mainFormInstance = mainForm;
             customerFormInstance = customerForm;
@@ -50,16 +50,20 @@ namespace Vaughns_business
             {
                 sw.WriteLine(customerDetails);
             }
-            MessageBox.Show("Customer successfully added");
-            ClearInputFields();
 
             // adding lecturer to lecturersList in Form1
             Customer newLecturer = new Customer(customerId, names[0], names[1], phone, email);
             customerFormInstance.AddCustomer(newLecturer);
+
+            MessageBox.Show("Customer successfully added");
+            ClearInputFields();
         }
         private void ClearInputFields()
         {
-
+            textBox_firstName.Text = "";
+            textBox_lastName.Text = "";
+            textBox_phone.Text = "";
+            textBox_email.Text = "";
         }
     }
 }

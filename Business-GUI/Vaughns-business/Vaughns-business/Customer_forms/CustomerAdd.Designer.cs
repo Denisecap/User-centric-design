@@ -1,6 +1,6 @@
 ﻿namespace Vaughns_business
 {
-    partial class CustomerCustomize
+    partial class CustomerAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -134,7 +134,7 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Add Customer";
             // 
-            // CustomerCustomize
+            // CustomerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +151,7 @@
             this.Controls.Add(this.textBox_phone);
             this.Controls.Add(this.textBox_lastName);
             this.Controls.Add(this.textBox_firstName);
-            this.Name = "CustomerCustomize";
+            this.Name = "CustomerAdd";
             this.Text = "CustomerCustomize";
             this.ResumeLayout(false);
             this.PerformLayout();

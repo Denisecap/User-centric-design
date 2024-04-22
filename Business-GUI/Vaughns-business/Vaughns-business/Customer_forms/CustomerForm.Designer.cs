@@ -59,6 +59,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(442, 433);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -119,6 +120,7 @@
             this.button_edit_customer.TabIndex = 3;
             this.button_edit_customer.Text = "Edit";
             this.button_edit_customer.UseVisualStyleBackColor = false;
+            this.button_edit_customer.Click += new System.EventHandler(this.button_edit_customer_Click);
             // 
             // button_delete_customer
             // 

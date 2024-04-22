@@ -47,12 +47,20 @@ namespace Vaughns_business
         public void AddCustomer(Customer customer)
         {
             customerList.Add(customer);
+            DisplayCustomers(); // updates the datagridview when new data is added
         }
+        // form to add customer
         private void button_add_customer_Click(object sender, EventArgs e)
         {
-            Form form = new CustomerCustomize(mainFormInstance, this);
+            Form form = new CustomerAdd(mainFormInstance, this);
             OpenContainerForm(form);
         }
+        // form to edit customer
+        private void button_edit_customer_Click(object sender, EventArgs e)
+        {
+
+        }
+        // form to delete customer
         private Form activeForm = null;
         private void OpenContainerForm(Form containerForm)
         {
