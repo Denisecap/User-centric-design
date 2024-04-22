@@ -32,11 +32,21 @@ namespace Vaughns_business
 
         private void textBox_customer_id_TextChanged(object sender, EventArgs e)
         {
-            string custId = textBox_customer_id.Text;
+            int custId = int.Parse(textBox_customer_id.Text);
+            string firstName;
+            string lastName;
+            string phone;
+            string email;
 
             foreach(Customer customer in customersList)
             {
-
+                if (customer.Id == custId)
+                {
+                    textBox_firstName.Text = customer.FirstName;
+                    textBox_lastName.Text = customer.LastName;
+                    textBox_phone.Text = customer.PhoneNumber;
+                    textBox_email.Text = customer.Email;
+                }
             }
         }
     }
