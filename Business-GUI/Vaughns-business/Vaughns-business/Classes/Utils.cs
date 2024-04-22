@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using static Vaughns_business.LoginForm;
+using System.Text.RegularExpressions;
 
 namespace Vaughns_business.Classes
 {
@@ -84,6 +85,25 @@ namespace Vaughns_business.Classes
                 StaffLogin staff = new StaffLogin(userId, userName, userPass);
                 staffLogins.Add(staff);
             }
+        }
+
+        // verify name
+        public static string[] GetName(string firstName, string lastName)
+        {
+            string[] names = new string[2];
+            string checkLetters = @"^[a-zA-Z ]+$"; // check if name does not has number and special char
+            Regex regex = new Regex(checkLetters);
+            if (!string.IsNullOrWhiteSpace(firstName) && regex.IsMatch(firstName) && !string.IsNullOrWhiteSpace(lastName) && regex.IsMatch(lastName))
+            {
+                names[0] = firstName;
+                names[1] = lastName;
+            }
+            else
+            {
+                names[0] = "";
+                names[1] = "";
+            }
+            return names;
         }
     }
 }
