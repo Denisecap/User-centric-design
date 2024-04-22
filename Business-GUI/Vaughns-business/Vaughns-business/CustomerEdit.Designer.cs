@@ -139,14 +139,15 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 99);
+            this.label6.Location = new System.Drawing.Point(53, 99);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.Size = new System.Drawing.Size(96, 13);
             this.label6.TabIndex = 23;
-            this.label6.Text = "Customer ID:";
+            this.label6.Text = "Enter Customer ID:";
             // 
             // textBox_customer_id
             // 
+            this.textBox_customer_id.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox_customer_id.Location = new System.Drawing.Point(151, 96);
             this.textBox_customer_id.Name = "textBox_customer_id";
             this.textBox_customer_id.Size = new System.Drawing.Size(193, 20);

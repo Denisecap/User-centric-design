@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,27 +28,88 @@ namespace Vaughns_business
         }
         private void button_edit_Click(object sender, EventArgs e)
         {
+            int customerId = int.Parse(textBox_customer_id.Text);
+            string firstName = textBox_firstName.Text;
+            string lastName = textBox_lastName.Text;
+            string phone = textBox_phone.Text;
+            string email = textBox_email.Text;
 
+            // verifying names
+            string[] names = Utils.GetName(firstName, lastName);
+            if (names[0] == "" || names[1] == "")
+            {
+                MessageBox.Show("Please enter a valid name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // find the customer in the list
+            Customer customerToUpdate = customersList.FirstOrDefault(c => c.Id == customerId);
+            if (customerToUpdate != null)
+            {
+                // update customer details
+                customerToUpdate.FirstName = firstName;
+                customerToUpdate.LastName = lastName;
+                customerToUpdate.PhoneNumber = phone;
+                customerToUpdate.Email = email;
+
+                // save the updated data back to the file
+                string filePath = "..\\..\\Text_files\\customers.txt";
+                using (StreamWriter sw = new StreamWriter(filePath))
+                {
+                    foreach (Customer customer in customersList)
+                    {
+                        sw.WriteLine($"{customer.Id},{customer.FirstName},{customer.LastName},{customer.PhoneNumber},{customer.Email}");
+                    }
+                }
+                customerFormInstance.EditCustomer(customerToUpdate);
+                MessageBox.Show("Customer data updated successfully.");
+                ClearInputFields();
+            }
         }
-
         private void textBox_customer_id_TextChanged(object sender, EventArgs e)
         {
-            int custId = int.Parse(textBox_customer_id.Text);
-            string firstName;
-            string lastName;
-            string phone;
-            string email;
+            // resets the texboxes every change
+            textBox_firstName.Text = "";
+            textBox_lastName.Text = "";
+            textBox_phone.Text = "";
+            textBox_email.Text = "";
 
-            foreach(Customer customer in customersList)
+            // check if the text has actually changed
+            if (textBox_customer_id.Text != "")
             {
-                if (customer.Id == custId)
+                string custId = textBox_customer_id.Text;
+                if (int.TryParse(custId, out int id))
                 {
-                    textBox_firstName.Text = customer.FirstName;
-                    textBox_lastName.Text = customer.LastName;
-                    textBox_phone.Text = customer.PhoneNumber;
-                    textBox_email.Text = customer.Email;
+                    foreach (Customer customer in customersList)
+                    {
+                        //displaying customer details in textboxes
+                        if (customer.Id == id)
+                        {
+                            textBox_firstName.Text = customer.FirstName;
+                            textBox_lastName.Text = customer.LastName;
+                            textBox_phone.Text = customer.PhoneNumber;
+                            textBox_email.Text = customer.Email;
+                        }
+                    }
+                }
+                else
+                {
+                    ClearInputFields();
+                    MessageBox.Show("Invalid ID");
                 }
             }
+            else
+            {
+                ClearInputFields();
+            }
+        }
+        private void ClearInputFields()
+        {
+            textBox_customer_id.Text = "";
+            textBox_firstName.Text = "";
+            textBox_lastName.Text = "";
+            textBox_phone.Text = "";
+            textBox_email.Text = "";
         }
     }
 }

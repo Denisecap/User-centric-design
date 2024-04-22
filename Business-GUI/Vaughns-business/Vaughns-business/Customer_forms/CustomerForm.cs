@@ -49,6 +49,13 @@ namespace Vaughns_business
             customerList.Add(customer);
             DisplayCustomers(); // updates the datagridview when new data is added
         }
+        // editing persons to list
+        public void EditCustomer(Customer customer)
+        {
+            int index = customerList.FindIndex(c => c.Id == customer.Id);
+            customerList[index] = customer;
+            DisplayCustomers();
+        }
         // form to add customer
         private void button_add_customer_Click(object sender, EventArgs e)
         {
