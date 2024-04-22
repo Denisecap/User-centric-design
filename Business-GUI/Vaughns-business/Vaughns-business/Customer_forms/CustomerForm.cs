@@ -58,7 +58,8 @@ namespace Vaughns_business
         // form to edit customer
         private void button_edit_customer_Click(object sender, EventArgs e)
         {
-
+            Form form = new CustomerEdit(mainFormInstance, this, customerList);
+            OpenContainerForm(form);
         }
         // form to delete customer
         private Form activeForm = null;
