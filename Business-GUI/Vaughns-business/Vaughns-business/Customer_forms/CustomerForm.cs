@@ -14,11 +14,10 @@ namespace Vaughns_business
     public partial class CustomerForm : Form
     {
         private List<Customer> customerList;
-        private List<Order> ordersList;
 
         // creating an instance of MainForm
         private MainForm mainFormInstance;
-        public CustomerForm(MainForm mainForm, List<Customer> customers, List<Order> orders)
+        public CustomerForm(MainForm mainForm, List<Customer> customers)
         {
             InitializeComponent();
 
@@ -27,7 +26,6 @@ namespace Vaughns_business
 
             // adding data to local list
             customerList = customers;
-            ordersList = orders;
 
             // display customers
             DisplayCustomers();

@@ -56,20 +56,24 @@ namespace Vaughns_business
             //}
 
         }
+
+        // opening form buttons
         private void button_customer_Click(object sender, EventArgs e)
         {
-            Form form = new CustomerForm(this, customersList, ordersList);
+            Form form = new CustomerForm(this, customersList);
             OpenContainerForm(form);
         }
         private void button_staff_Click(object sender, EventArgs e)
         {
-
+            Form form = new StaffForm(this, staffList);
+            OpenContainerForm(form);
         }
         private void button_orders_Click(object sender, EventArgs e)
         {
             Form form = new OrdersForm();
             OpenContainerForm(form);
         }
+
 
         // call this to update customers list in main form
         public void UpdateCustomerList(List<Customer> newCustomerList)
