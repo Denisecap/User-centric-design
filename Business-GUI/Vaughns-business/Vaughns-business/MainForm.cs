@@ -25,6 +25,7 @@ namespace Vaughns_business
             // initializing form
             ReadInPeople();
             SetUserLabel(userId);
+            DisplayCustomers();
         }
         private void ReadInPeople()
         {
@@ -59,6 +60,11 @@ namespace Vaughns_business
         {
             Form form = new CustomerForm(this, customersList, ordersList);
             OpenContainerForm(form);
+        }
+        public void UpdateCustomerList(List<Customer> newCustomerList)
+        {
+            customersList = null;
+            customersList = newCustomerList;
         }
         private void SetUserLabel(int userId)
         {

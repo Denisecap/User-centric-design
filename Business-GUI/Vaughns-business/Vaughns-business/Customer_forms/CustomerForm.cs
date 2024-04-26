@@ -54,6 +54,13 @@ namespace Vaughns_business
         {
             int index = customerList.FindIndex(c => c.Id == customer.Id);
             customerList[index] = customer;
+            mainFormInstance.UpdateCustomerList(customerList);
+            DisplayCustomers();
+        }
+        // removing persons from list
+        public void RemoveCustomer(Customer customer)
+        {
+            customerList.Remove(customer);
             DisplayCustomers();
         }
         // form to add customer
@@ -71,7 +78,7 @@ namespace Vaughns_business
         // form to remove customer
         private void button_delete_customer_Click(object sender, EventArgs e)
         {
-            Form form = new CustomerRemove();
+            Form form = new CustomerRemove(customerList, this);
             OpenContainerForm(form);
         }
         // form to delete customer

@@ -31,8 +31,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button_clear = new System.Windows.Forms.Button();
             this.button_add = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_firstName = new System.Windows.Forms.TextBox();
+            this.label_customer_id = new System.Windows.Forms.Label();
+            this.textBox_customer_id = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label5
@@ -47,37 +47,39 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(151, 162);
+            this.button_clear.Location = new System.Drawing.Point(141, 162);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(75, 23);
             this.button_clear.TabIndex = 20;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(269, 162);
+            this.button_add.Location = new System.Drawing.Point(259, 162);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(75, 23);
             this.button_add.TabIndex = 19;
-            this.button_add.Text = "Add";
+            this.button_add.Text = "Remove";
             this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
-            // label1
+            // label_customer_id
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Customer ID:";
+            this.label_customer_id.AutoSize = true;
+            this.label_customer_id.Location = new System.Drawing.Point(49, 110);
+            this.label_customer_id.Name = "label_customer_id";
+            this.label_customer_id.Size = new System.Drawing.Size(68, 13);
+            this.label_customer_id.TabIndex = 15;
+            this.label_customer_id.Text = "Customer ID:";
             // 
-            // textBox_firstName
+            // textBox_customer_id
             // 
-            this.textBox_firstName.Location = new System.Drawing.Point(151, 107);
-            this.textBox_firstName.Name = "textBox_firstName";
-            this.textBox_firstName.Size = new System.Drawing.Size(193, 20);
-            this.textBox_firstName.TabIndex = 11;
+            this.textBox_customer_id.Location = new System.Drawing.Point(141, 107);
+            this.textBox_customer_id.Name = "textBox_customer_id";
+            this.textBox_customer_id.Size = new System.Drawing.Size(193, 20);
+            this.textBox_customer_id.TabIndex = 11;
             // 
             // CustomerRemove
             // 
@@ -88,8 +90,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_add);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_firstName);
+            this.Controls.Add(this.label_customer_id);
+            this.Controls.Add(this.textBox_customer_id);
             this.Name = "CustomerRemove";
             this.Text = "CustomerRemove";
             this.ResumeLayout(false);
@@ -102,7 +104,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Button button_add;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_firstName;
+        private System.Windows.Forms.Label label_customer_id;
+        private System.Windows.Forms.TextBox textBox_customer_id;
     }
 }
