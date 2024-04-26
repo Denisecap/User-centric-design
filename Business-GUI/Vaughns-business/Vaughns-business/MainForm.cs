@@ -61,9 +61,14 @@ namespace Vaughns_business
             Form form = new CustomerForm(this, customersList, ordersList);
             OpenContainerForm(form);
         }
-        private void button_orders_Click(object sender, EventArgs e)
+        private void button_staff_Click(object sender, EventArgs e)
         {
 
+        }
+        private void button_orders_Click(object sender, EventArgs e)
+        {
+            Form form = new OrdersForm();
+            OpenContainerForm(form);
         }
 
         // call this to update customers list in main form

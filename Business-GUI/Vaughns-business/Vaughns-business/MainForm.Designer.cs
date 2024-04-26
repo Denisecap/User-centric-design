@@ -38,6 +38,7 @@
             this.button_home_page = new System.Windows.Forms.Button();
             this.panel_container = new System.Windows.Forms.Panel();
             this.button_orders = new System.Windows.Forms.Button();
+            this.button_staff = new System.Windows.Forms.Button();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.panel_bottom.SuspendLayout();
@@ -92,6 +93,7 @@
             // panel_bottom
             // 
             this.panel_bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel_bottom.Controls.Add(this.button_staff);
             this.panel_bottom.Controls.Add(this.button_orders);
             this.panel_bottom.Controls.Add(this.button_customer);
             this.panel_bottom.Controls.Add(this.button_home_page);
@@ -106,7 +108,7 @@
             this.button_customer.BackColor = System.Drawing.Color.RosyBrown;
             this.button_customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_customer.Location = new System.Drawing.Point(290, 20);
+            this.button_customer.Location = new System.Drawing.Point(177, 20);
             this.button_customer.Name = "button_customer";
             this.button_customer.Size = new System.Drawing.Size(85, 39);
             this.button_customer.TabIndex = 3;
@@ -149,6 +151,19 @@
             this.button_orders.UseVisualStyleBackColor = false;
             this.button_orders.Click += new System.EventHandler(this.button_orders_Click);
             // 
+            // button_staff
+            // 
+            this.button_staff.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_staff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_staff.Location = new System.Drawing.Point(306, 20);
+            this.button_staff.Name = "button_staff";
+            this.button_staff.Size = new System.Drawing.Size(85, 39);
+            this.button_staff.TabIndex = 5;
+            this.button_staff.Text = "Staff";
+            this.button_staff.UseVisualStyleBackColor = false;
+            this.button_staff.Click += new System.EventHandler(this.button_staff_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,5 +194,6 @@
         private System.Windows.Forms.Button button_customer;
         private System.Windows.Forms.Panel panel_container;
         private System.Windows.Forms.Button button_orders;
+        private System.Windows.Forms.Button button_staff;
     }
 }
