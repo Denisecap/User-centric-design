@@ -47,7 +47,12 @@ namespace Vaughns_business
         public void AddCustomer(Customer customer)
         {
             customerList.Add(customer);
-            DisplayCustomers(); // updates the datagridview when new data is added
+
+            // adds new list to main form customers list
+            mainFormInstance.UpdateCustomerList(customerList);
+
+            // updates the datagridview when new data is added
+            DisplayCustomers();
         }
         // editing persons to list
         public void EditCustomer(Customer customer)
@@ -61,6 +66,7 @@ namespace Vaughns_business
         public void RemoveCustomer(Customer customer)
         {
             customerList.Remove(customer);
+            mainFormInstance.UpdateCustomerList(customerList);
             DisplayCustomers();
         }
         // form to add customer

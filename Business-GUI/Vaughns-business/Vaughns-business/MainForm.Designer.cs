@@ -37,12 +37,10 @@
             this.button_customer = new System.Windows.Forms.Button();
             this.button_home_page = new System.Windows.Forms.Button();
             this.panel_container = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_orders = new System.Windows.Forms.Button();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.panel_bottom.SuspendLayout();
-            this.panel_container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_top
@@ -94,6 +92,7 @@
             // panel_bottom
             // 
             this.panel_bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel_bottom.Controls.Add(this.button_orders);
             this.panel_bottom.Controls.Add(this.button_customer);
             this.panel_bottom.Controls.Add(this.button_home_page);
             this.panel_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -107,7 +106,7 @@
             this.button_customer.BackColor = System.Drawing.Color.RosyBrown;
             this.button_customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_customer.Location = new System.Drawing.Point(331, 20);
+            this.button_customer.Location = new System.Drawing.Point(290, 20);
             this.button_customer.Name = "button_customer";
             this.button_customer.Size = new System.Drawing.Size(85, 39);
             this.button_customer.TabIndex = 3;
@@ -126,24 +125,29 @@
             this.button_home_page.TabIndex = 2;
             this.button_home_page.Text = "Home";
             this.button_home_page.UseVisualStyleBackColor = false;
+            this.button_home_page.Click += new System.EventHandler(this.button_home_page_Click);
             // 
             // panel_container
             // 
             this.panel_container.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel_container.Controls.Add(this.dataGridView1);
             this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_container.Location = new System.Drawing.Point(0, 80);
             this.panel_container.Name = "panel_container";
             this.panel_container.Size = new System.Drawing.Size(884, 501);
             this.panel_container.TabIndex = 2;
             // 
-            // dataGridView1
+            // button_orders
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(81, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.button_orders.BackColor = System.Drawing.Color.RosyBrown;
+            this.button_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_orders.Location = new System.Drawing.Point(426, 20);
+            this.button_orders.Name = "button_orders";
+            this.button_orders.Size = new System.Drawing.Size(85, 39);
+            this.button_orders.TabIndex = 4;
+            this.button_orders.Text = "Orders";
+            this.button_orders.UseVisualStyleBackColor = false;
+            this.button_orders.Click += new System.EventHandler(this.button_orders_Click);
             // 
             // MainForm
             // 
@@ -160,8 +164,6 @@
             this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.panel_bottom.ResumeLayout(false);
-            this.panel_container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,6 +178,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_customer;
         private System.Windows.Forms.Panel panel_container;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_orders;
     }
 }

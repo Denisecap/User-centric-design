@@ -18,6 +18,7 @@ namespace Vaughns_business
         private List<Customer> customersList = new List<Customer>();
         private List<Staff> staffList = new List<Staff>();
         private List<Order> ordersList = new List<Order>();
+
         public MainForm(int userId)
         {
             InitializeComponent();
@@ -25,7 +26,6 @@ namespace Vaughns_business
             // initializing form
             ReadInPeople();
             SetUserLabel(userId);
-            DisplayCustomers();
         }
         private void ReadInPeople()
         {
@@ -61,10 +61,20 @@ namespace Vaughns_business
             Form form = new CustomerForm(this, customersList, ordersList);
             OpenContainerForm(form);
         }
+        private void button_orders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // call this to update customers list in main form
         public void UpdateCustomerList(List<Customer> newCustomerList)
         {
-            customersList = null;
             customersList = newCustomerList;
+        }
+        // call this to update orders list in main form
+        public void UpdateOrdersList(List<Order> newOrdersList)
+        {
+            ordersList = newOrdersList;
         }
         private void SetUserLabel(int userId)
         {
@@ -122,6 +132,11 @@ namespace Vaughns_business
             panel_container.Tag = containerForm;
             containerForm.BringToFront();
             containerForm.Show();
+        }
+
+        private void button_home_page_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
