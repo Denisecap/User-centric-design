@@ -80,6 +80,11 @@ namespace Vaughns_business
         {
             customersList = newCustomerList;
         }
+        // call this to update staff list in main form
+        public void UpdateStaffList(List<Staff> newStaffList)
+        {
+            staffList = newStaffList;
+        }
         // call this to update orders list in main form
         public void UpdateOrdersList(List<Order> newOrdersList)
         {

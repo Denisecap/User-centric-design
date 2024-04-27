@@ -42,5 +42,31 @@ namespace Vaughns_business
                 Salary = $"{(double)staff.Salary:c}",
             }).ToList();
         }
+        // adding persons to list
+        public void AddStaff(Staff staff)
+        {
+            staffList.Add(staff);
+
+            // adds new list to main form customers list
+            mainFormInstance.UpdateCustomerList(staffList);
+
+            // updates the datagridview when new data is added
+            DisplayStaff();
+        }
+        // editing persons to list
+        public void EditStaff(Staff staff)
+        {
+            int index = staffList.FindIndex(s => s.Id == staff.Id);
+            staffList[index] = staff;
+            mainFormInstance.UpdateStaffList(staffList);
+            DisplayCustomers();
+        }
+        // removing persons from list
+        public void RemoveCustomer(Customer customer)
+        {
+            customerList.Remove(customer);
+            mainFormInstance.UpdateCustomerList(customerList);
+            DisplayCustomers();
+        }
     }
 }

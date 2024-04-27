@@ -39,7 +39,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(85, 34);
+            this.label5.Location = new System.Drawing.Point(107, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(204, 25);
             this.label5.TabIndex = 21;
@@ -47,7 +47,7 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(120, 162);
+            this.button_clear.Location = new System.Drawing.Point(142, 162);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(75, 23);
             this.button_clear.TabIndex = 20;
@@ -57,7 +57,7 @@
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(238, 162);
+            this.button_add.Location = new System.Drawing.Point(260, 162);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(75, 23);
             this.button_add.TabIndex = 19;
@@ -68,7 +68,7 @@
             // label_customer_id
             // 
             this.label_customer_id.AutoSize = true;
-            this.label_customer_id.Location = new System.Drawing.Point(28, 110);
+            this.label_customer_id.Location = new System.Drawing.Point(50, 110);
             this.label_customer_id.Name = "label_customer_id";
             this.label_customer_id.Size = new System.Drawing.Size(68, 13);
             this.label_customer_id.TabIndex = 15;
@@ -76,7 +76,7 @@
             // 
             // textBox_customer_id
             // 
-            this.textBox_customer_id.Location = new System.Drawing.Point(120, 107);
+            this.textBox_customer_id.Location = new System.Drawing.Point(142, 107);
             this.textBox_customer_id.Name = "textBox_customer_id";
             this.textBox_customer_id.Size = new System.Drawing.Size(193, 20);
             this.textBox_customer_id.TabIndex = 11;
@@ -86,7 +86,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(347, 394);
+            this.ClientSize = new System.Drawing.Size(410, 394);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_add);
