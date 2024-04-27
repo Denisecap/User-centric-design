@@ -48,7 +48,7 @@ namespace Vaughns_business
             staffList.Add(staff);
 
             // adds new list to main form customers list
-            mainFormInstance.UpdateCustomerList(staffList);
+            mainFormInstance.UpdateStaffList(staffList);
 
             // updates the datagridview when new data is added
             DisplayStaff();
@@ -59,14 +59,45 @@ namespace Vaughns_business
             int index = staffList.FindIndex(s => s.Id == staff.Id);
             staffList[index] = staff;
             mainFormInstance.UpdateStaffList(staffList);
-            DisplayCustomers();
+            DisplayStaff();
         }
         // removing persons from list
-        public void RemoveCustomer(Customer customer)
+        public void RemoveStaff(Staff staff)
         {
-            customerList.Remove(customer);
-            mainFormInstance.UpdateCustomerList(customerList);
-            DisplayCustomers();
+            staffList.Remove(staff);
+            mainFormInstance.UpdateStaffList(staffList);
+            DisplayStaff();
+        }
+
+        // form to add staff
+        private void button_add_staff_Click(object sender, EventArgs e)
+        {
+
+        }
+        // form to edit staff
+        private void button_edit_staff_Click(object sender, EventArgs e)
+        {
+
+        }
+        // form to remove staff
+        private void button_delete_staff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // opens form inside panel_container
+        private Form activeForm = null;
+        private void OpenContainerForm(Form containerForm)
+        {
+            activeForm?.Close(); // closes current form
+            activeForm = containerForm;
+            containerForm.TopLevel = false;
+            containerForm.FormBorderStyle = FormBorderStyle.None;
+            containerForm.Dock = DockStyle.Fill;
+            panel_container.Controls.Add(containerForm);
+            panel_container.Tag = containerForm;
+            containerForm.BringToFront();
+            containerForm.Show();
         }
     }
 }

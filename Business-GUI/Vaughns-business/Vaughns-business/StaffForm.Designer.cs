@@ -70,6 +70,7 @@
             this.button_delete_staff.TabIndex = 4;
             this.button_delete_staff.Text = "Delete";
             this.button_delete_staff.UseVisualStyleBackColor = false;
+            this.button_delete_staff.Click += new System.EventHandler(this.button_delete_staff_Click);
             // 
             // button_edit_staff
             // 
@@ -84,6 +85,7 @@
             this.button_edit_staff.TabIndex = 3;
             this.button_edit_staff.Text = "Edit";
             this.button_edit_staff.UseVisualStyleBackColor = false;
+            this.button_edit_staff.Click += new System.EventHandler(this.button_edit_staff_Click);
             // 
             // button_add_staff
             // 
@@ -98,6 +100,7 @@
             this.button_add_staff.TabIndex = 2;
             this.button_add_staff.Text = "Add";
             this.button_add_staff.UseVisualStyleBackColor = false;
+            this.button_add_staff.Click += new System.EventHandler(this.button_add_staff_Click);
             // 
             // panel_staff
             // 

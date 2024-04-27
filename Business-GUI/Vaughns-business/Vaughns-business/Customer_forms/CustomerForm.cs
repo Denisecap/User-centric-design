@@ -85,7 +85,8 @@ namespace Vaughns_business
             Form form = new CustomerRemove(customerList, this);
             OpenContainerForm(form);
         }
-        // form to delete customer
+
+        // opens form inside panel_container
         private Form activeForm = null;
         private void OpenContainerForm(Form containerForm)
         {
