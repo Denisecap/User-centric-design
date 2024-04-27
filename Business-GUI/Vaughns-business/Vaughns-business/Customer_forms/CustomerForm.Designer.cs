@@ -60,7 +60,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(597, 433);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -154,16 +154,16 @@
             this.panel_customers.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_customers.Location = new System.Drawing.Point(0, 0);
             this.panel_customers.Name = "panel_customers";
-            this.panel_customers.Size = new System.Drawing.Size(442, 433);
+            this.panel_customers.Size = new System.Drawing.Size(597, 433);
             this.panel_customers.TabIndex = 6;
             // 
             // panel_container
             // 
             this.panel_container.BackColor = System.Drawing.Color.RosyBrown;
             this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_container.Location = new System.Drawing.Point(442, 0);
+            this.panel_container.Location = new System.Drawing.Point(597, 0);
             this.panel_container.Name = "panel_container";
-            this.panel_container.Size = new System.Drawing.Size(426, 433);
+            this.panel_container.Size = new System.Drawing.Size(271, 433);
             this.panel_container.TabIndex = 7;
             // 
             // CustomerForm

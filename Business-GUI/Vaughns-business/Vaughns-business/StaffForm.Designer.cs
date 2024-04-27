@@ -28,27 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_container = new System.Windows.Forms.Panel();
+            this.panel_edit_customers = new System.Windows.Forms.Panel();
+            this.button_delete_customer = new System.Windows.Forms.Button();
+            this.button_edit_customer = new System.Windows.Forms.Button();
+            this.button_add_customer = new System.Windows.Forms.Button();
             this.panel_customers = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_container = new System.Windows.Forms.Panel();
+            this.panel_edit_customers.SuspendLayout();
             this.panel_customers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel_container
+            // panel_edit_customers
             // 
-            this.panel_container.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_container.Location = new System.Drawing.Point(442, 0);
-            this.panel_container.Name = "panel_container";
-            this.panel_container.Size = new System.Drawing.Size(426, 462);
-            this.panel_container.TabIndex = 9;
+            this.panel_edit_customers.Controls.Add(this.button_delete_customer);
+            this.panel_edit_customers.Controls.Add(this.button_edit_customer);
+            this.panel_edit_customers.Controls.Add(this.button_add_customer);
+            this.panel_edit_customers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_edit_customers.Location = new System.Drawing.Point(0, 433);
+            this.panel_edit_customers.Name = "panel_edit_customers";
+            this.panel_edit_customers.Size = new System.Drawing.Size(868, 29);
+            this.panel_edit_customers.TabIndex = 6;
+            // 
+            // button_delete_customer
+            // 
+            this.button_delete_customer.BackColor = System.Drawing.Color.IndianRed;
+            this.button_delete_customer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button_delete_customer.FlatAppearance.BorderSize = 0;
+            this.button_delete_customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete_customer.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_delete_customer.Location = new System.Drawing.Point(150, 0);
+            this.button_delete_customer.Name = "button_delete_customer";
+            this.button_delete_customer.Size = new System.Drawing.Size(75, 29);
+            this.button_delete_customer.TabIndex = 4;
+            this.button_delete_customer.Text = "Delete";
+            this.button_delete_customer.UseVisualStyleBackColor = false;
+            // 
+            // button_edit_customer
+            // 
+            this.button_edit_customer.BackColor = System.Drawing.Color.IndianRed;
+            this.button_edit_customer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button_edit_customer.FlatAppearance.BorderSize = 0;
+            this.button_edit_customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_edit_customer.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_edit_customer.Location = new System.Drawing.Point(75, 0);
+            this.button_edit_customer.Name = "button_edit_customer";
+            this.button_edit_customer.Size = new System.Drawing.Size(75, 29);
+            this.button_edit_customer.TabIndex = 3;
+            this.button_edit_customer.Text = "Edit";
+            this.button_edit_customer.UseVisualStyleBackColor = false;
+            // 
+            // button_add_customer
+            // 
+            this.button_add_customer.BackColor = System.Drawing.Color.IndianRed;
+            this.button_add_customer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button_add_customer.FlatAppearance.BorderSize = 0;
+            this.button_add_customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_add_customer.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_add_customer.Location = new System.Drawing.Point(0, 0);
+            this.button_add_customer.Name = "button_add_customer";
+            this.button_add_customer.Size = new System.Drawing.Size(75, 29);
+            this.button_add_customer.TabIndex = 2;
+            this.button_add_customer.Text = "Add";
+            this.button_add_customer.UseVisualStyleBackColor = false;
             // 
             // panel_customers
             // 
@@ -56,7 +103,7 @@
             this.panel_customers.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_customers.Location = new System.Drawing.Point(0, 0);
             this.panel_customers.Name = "panel_customers";
-            this.panel_customers.Size = new System.Drawing.Size(442, 462);
+            this.panel_customers.Size = new System.Drawing.Size(505, 433);
             this.panel_customers.TabIndex = 8;
             // 
             // dataGridView1
@@ -68,8 +115,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column5,
-            this.Column6,
             this.Column2,
             this.Column3,
             this.Column4});
@@ -77,28 +122,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 462);
+            this.dataGridView1.Size = new System.Drawing.Size(505, 433);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "StaffID";
+            this.Column1.DataPropertyName = "CustomerID";
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.Width = 43;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Position";
-            this.Column5.HeaderText = "Position";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Salary";
-            this.Column6.HeaderText = "Salary";
-            this.Column6.Name = "Column6";
             // 
             // Column2
             // 
@@ -121,6 +154,15 @@
             this.Column4.HeaderText = "Email";
             this.Column4.Name = "Column4";
             // 
+            // panel_container
+            // 
+            this.panel_container.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_container.Location = new System.Drawing.Point(505, 0);
+            this.panel_container.Name = "panel_container";
+            this.panel_container.Size = new System.Drawing.Size(363, 433);
+            this.panel_container.TabIndex = 9;
+            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,8 +171,10 @@
             this.ClientSize = new System.Drawing.Size(868, 462);
             this.Controls.Add(this.panel_container);
             this.Controls.Add(this.panel_customers);
+            this.Controls.Add(this.panel_edit_customers);
             this.Name = "StaffForm";
             this.Text = "StaffForm";
+            this.panel_edit_customers.ResumeLayout(false);
             this.panel_customers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -139,14 +183,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel_container;
+        private System.Windows.Forms.Panel panel_edit_customers;
+        private System.Windows.Forms.Button button_delete_customer;
+        private System.Windows.Forms.Button button_edit_customer;
+        private System.Windows.Forms.Button button_add_customer;
         private System.Windows.Forms.Panel panel_customers;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Panel panel_container;
     }
 }
