@@ -19,9 +19,9 @@ namespace Vaughns_business
         private CustomerForm customerFormInstance;
         public CustomerAdd(MainForm mainForm, CustomerForm customerForm)
         {
+            InitializeComponent();
             mainFormInstance = mainForm;
             customerFormInstance = customerForm;
-            InitializeComponent();
         }
 
         private void button_add_Click(object sender, EventArgs e)

@@ -72,7 +72,8 @@ namespace Vaughns_business
         // form to add staff
         private void button_add_staff_Click(object sender, EventArgs e)
         {
-
+            Form form = new StaffAdd(mainFormInstance, this);
+            OpenContainerForm(form);
         }
         // form to edit staff
         private void button_edit_staff_Click(object sender, EventArgs e)
